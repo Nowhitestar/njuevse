@@ -112,7 +112,7 @@ menu: [
 var FileMenu;
 switch(viewConfig.environment) {
 	case environment.InsightMakerOnline:
-		FileMenu = [];
+		FileMenu = [FileMenuWeb];
 		break;
 	case environment.WebOffline:
 		FileMenu = [FileMenuWeb];
