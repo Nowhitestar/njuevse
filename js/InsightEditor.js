@@ -1651,7 +1651,7 @@ function main() {
 				'renderer': equationRenderer
 			});
 		} else if (cell.value.nodeName == "Link") {
-			bottomDesc = descBase + "链接连接模型的不同部分。 如果模型中的一个基元在其等式中引用另一个基元，则两个基元必须直接连接或通过链接连接。 一旦与链接连接，方括号可用于引用其他基元的值。 因此，如果您有一个名为<i>银行余额</ i>的股票，您可以使用<i> [银行余额] </ i>在另一个基元的等式中引用它。" + descriptionLink("/links", "Links");
+			bottomDesc = descBase + "链接连接模型的不同部分。 如果模型中的一个图元在其等式中引用另一个图元，则两个图元必须直接连接或通过链接连接。 一旦与链接连接，方括号可用于引用其他图元的值。 因此，如果您有一个名为<i>银行余额</ i>的股票，您可以使用<i> [银行余额] </ i>在另一个图元的等式中引用它。" + descriptionLink("/links", "Links");
 			properties.push({
 				'name': 'BiDirectional',
 				'text': getText('双向'),
@@ -1767,7 +1767,7 @@ function main() {
 				'group': ' ' + getText('配置')
 			});
 		} else if (cell.value.nodeName == "Action") {
-			bottomDesc = descBase + "动作基元可用于执行某些操作，例如转换主体或动态创建它们之间的连接。" + descriptionLink("/actions", "Actions");
+			bottomDesc = descBase + "动作图元可用于执行某些操作，例如转换主体或动态创建它们之间的连接。" + descriptionLink("/actions", "Actions");
 			properties.push({
 				'name': 'Trigger',
 				'text': getText('触发'),
@@ -1989,7 +1989,7 @@ function main() {
 
 
 		} else if (cellType == "Ghost") {
-			bottomDesc = descBase + "这个项目是另一个原始的'Ghost'。 它反映了源基元的值和属性。 您无法编辑Ghost的属性。 您需要编辑其源的属性。";
+			bottomDesc = descBase + "这个项目是另一个原始的'Ghost'。 它反映了源图元的值和属性。 您无法编辑Ghost的属性。 您需要编辑其源的属性。";
 			bottomDesc = bottomDesc + "<center style='padding-top: 6px'><a href='#' onclick='var x = findID(getSelected()[0].getAttribute(\"Source\"));highlight(x);'>Show Source <i class='fa fa-angle-right '></i></a></center>" + descriptionLink("/ghosting", "Ghosts");
 			
 		} else if (cellType == "Converter") {
@@ -2583,7 +2583,7 @@ function showContextMenu(node, e) {
 			'-',
 			editActions["delete"],
 			'-', {
-				text: getText("影子基元"),
+				text: getText("影子图元"),
 				glyph: 0xf0c5,
 				disabled: graph.getSelectionCount() != 1 || ((!isValued(graph.getSelectionCell()) && graph.getSelectionCell().value.nodeName != "Picture")) || graph.getSelectionCell().value.nodeName == "Flow" || graph.getSelectionCell().value.nodeName == "Ghost",
 				handler: makeGhost

@@ -180,28 +180,28 @@ function openDisplayConfigure(win) {
 									text: getText("时间序列"),
 									itemId: "Time Series",
 									pressed: true,
-									tooltip: "时间序列图表显示一个或基元的值如何随时间变化。"
+									tooltip: "时间序列图表显示一个或图元的值如何随时间变化。"
 								},
 								{
 									//glyph: 0xf095,
 									//iconCls: 'green-icon',
 									text: getText("散点图"),
 									itemId: "Scatterplot",
-									tooltip: "散点图允许您查看两个基元如何一起变化。 它也被称为相平面图。"
+									tooltip: "散点图允许您查看两个图元如何一起变化。 它也被称为相平面图。"
 								},
 								{
 									//glyph: 0xf095,
 									//iconCls: 'green-icon',
 									text: getText("表格"),
 									itemId: "Tabular",
-									tooltip: "表格为您提供模拟过程中基元的精确值。"
+									tooltip: "表格为您提供模拟过程中图元的精确值。"
 								},
 								{
 									//glyph: 0xf095,
 									//iconCls: 'green-icon',
 									text: getText("主体地图"),
 									itemId: "Map",
-									tooltip: "主体映射在主体群基元中绘制主体的地理位置。 还绘制了主体和主体状态之间的连接。"
+									tooltip: "主体映射在主体群图元中绘制主体的地理位置。 还绘制了主体和主体状态之间的连接。"
 								}
 								],
 								listeners: {
@@ -274,7 +274,7 @@ function openDisplayConfigure(win) {
 								fieldLabel: '',
 								name: 'autoAdd',
 								id: 'autoAdd',
-								boxLabel: getText("将新创建的基元添加到数据中")
+								boxLabel: getText("将新创建的图元添加到数据中")
 							}
 
 						]
@@ -547,9 +547,9 @@ function openDisplayConfigure(win) {
 							if (type == "Scatterplot") {
 								if (items.length > 2) {
 									items.length = 2;
-									mxUtils.alert(getText("散点图的基元列表已被截断为两个项目。 一个用于x轴，一个用于y轴。"));
+									mxUtils.alert(getText("散点图的图元列表已被截断为两个项目。 一个用于x轴，一个用于y轴。"));
 								} else if (items.length == 1) {
-									mxUtils.alert(getText("您需要两个基元来创建散点图。 一个用于x轴，一个用于y轴。"));
+									mxUtils.alert(getText("您需要两个图元来创建散点图。 一个用于x轴，一个用于y轴。"));
 								}
 							} else if (type == "Map") {
 								//console.log(items);
@@ -568,7 +568,7 @@ function openDisplayConfigure(win) {
 
 								}
 								if (removed) {
-									mxUtils.alert(getText("地图图表只能显示主体群基元。"));
+									mxUtils.alert(getText("地图图表只能显示主体群图元。"));
 								}
 							}
 							graph.getModel()

@@ -95,7 +95,7 @@ function showInsertModelWindow(pt) {
 
 
 
-function importMXGraph(txt) {
+function importMXG raph(txt) {
 	graph_source_data = txt.replace(/InsightMakerModel/g, "mxGraphModel");
 	var doc = mxUtils.parseXml(graph_source_data);
 	var dec = new mxCodec(doc);

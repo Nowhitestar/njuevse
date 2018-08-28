@@ -199,7 +199,7 @@ editActions["delete"] = {
     itemId: 'delete',
     text: getText('删除'),
     glyph: 0xf00d,
-    tooltip: getText('删除基元'),
+    tooltip: getText('删除图元'),
     handler: function() {
         graph.removeCells(graph.getSelectionCells(), false);
     },
@@ -954,7 +954,7 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
             }
         }, '-', {
             itemId: 'picturemenu',
-            text: '基元图片',
+            text: '图元图片',
             tooltip: getText('调整图片'),
             glyph: 0xf03e,
             handler: function() {},
@@ -1126,14 +1126,14 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
                 ,
                 {
                     hidden: (!viewConfig.primitiveGroup),
-                    text: getText('添加基元'),
+                    text: getText('添加图元'),
                     itemId: 'valued',
                     iconCls: 'green-icon',
                     glyph: 0xf055,
                     menu: [{
                             xtype: "component",
                             indent: false,
-                            html: "<b>" + getText('系统动力') + "</b>",
+                            html: "<b>" + getText('系统动力学模型') + "</b>",
                             disabled: true,
                             style: {
                                 "margin": "10px 5px 10px 5px"
@@ -1174,7 +1174,7 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
                         }, '-', {
                             xtype: "component",
                             indent: false,
-                            html: "<b>" + getText('基于主体的建模') + "</b>",
+                            html: "<b>" + getText('多主体模型') + "</b>",
                             disabled: true,
                             style: {
                                 "margin": "10px 5px 10px 5px"
@@ -1253,16 +1253,16 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
 
                         }, '-', {
                             itemId: 'ghostBut',
-                            text: getText('影子基元'),
+                            text: getText('影子图元'),
                             glyph: 0xf0c5,
-                            tooltip: getText('创建所选基元的链接别名，可以帮助您组织模型'),
+                            tooltip: getText('创建所选图元的链接别名，可以帮助您组织模型'),
                             scope: this,
                             handler: makeGhost
                         }, {
                             itemId: 'folder',
                             text: getText('创建文件夹'),
                             glyph: 0xf114,
-                            tooltip: getText('创建一个包含所选基元的新文件夹'),
+                            tooltip: getText('创建一个包含所选图元的新文件夹'),
                             scope: this,
                             handler: makeFolder
                         }
@@ -1281,13 +1281,13 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
                             text: '流/转换',
                             id: "connect",
                             pressed: true,
-                            tooltip: "使用流或转换来连接基元。 选择一个基元并拖动基元上显示的箭头以建立连接。 流转移物质，转换切换状态。"
+                            tooltip: "使用流或转换来连接图元。 选择一个图元并拖动图元上显示的箭头以建立连接。 流转移物质，转换切换状态。"
                         },
                         {
                             //glyph: 0xf095,
                             //iconCls: 'green-icon',
                             text: '链接',
-                            tooltip: "使用链接连接基元。 选择一个基元并拖动基元上显示的箭头以建立连接。 链接传输信息。"
+                            tooltip: "使用链接连接图元。 选择一个图元并拖动图元上显示的箭头以建立连接。 链接传输信息。"
                         }
                     ]
                 },

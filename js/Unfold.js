@@ -628,7 +628,7 @@ var revealUnfoldButtons = function(showUnfold) {
 							}
 						}, {
 							xtype: "displayfield",
-							value: getText("基元（留空以适用于所有人）") + ":"
+							value: getText("图元（留空以适用于所有人）") + ":"
 						},
 						Ext.create('Ext.form.field.Tag', {
 							hideLabel: true,
@@ -851,7 +851,7 @@ var revealUnfoldButtons = function(showUnfold) {
 					},
 					items: [{
 							xtype: "displayfield",
-							value: getText("将显示其注释的基元") + ":"
+							value: getText("将显示其注释的图元") + ":"
 						},
 						Ext.create('Ext.form.field.Tag', {
 							hideLabel: true,

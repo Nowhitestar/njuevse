@@ -71,7 +71,7 @@ function doOptimizer(){
 	var grid = Ext.create('Ext.grid.Panel', {
 	    store: gridStore,
 	    columns: [
-	        {header: getText('基元名称'),  sortable: false, menuDisabled: true, dataIndex: 'id',flex:1,
+	        {header: getText('图元名称'),  sortable: false, menuDisabled: true, dataIndex: 'id',flex:1,
 				renderer: function(value) {
 	            	return getName(findID(value));
 	        	}
@@ -124,7 +124,7 @@ function doOptimizer(){
 		margin: '11 11 11 11',
 			items: [
 			Ext.create('Ext.form.field.ComboBox', {
-				fieldLabel: getText('目标基元'),
+				fieldLabel: getText('目标图元'),
 				name: 'optGoalPrimitive',
 				id: 'optGoalPrimitive',
 				displayField: 'pname',
@@ -133,7 +133,7 @@ function doOptimizer(){
 				store: targetConfigStore,
 				forceSelection:true,
 				allowBlank:false,
-				emptyText: getText('选择要定位的基元'),
+				emptyText: getText('选择要定位的图元'),
 				value: mySetting.getAttribute("OptimizerGoalPrimitive")?mySetting.getAttribute("OptimizerGoalPrimitive"):undefined
 			}),
 			Ext.create('Ext.form.field.ComboBox', {
@@ -157,7 +157,7 @@ function doOptimizer(){
 				value: mySetting.getAttribute("OptimizerGoalType")?mySetting.getAttribute("OptimizerGoalType"):"Integral of Value"
 			}),
 			Ext.create('Ext.form.field.Tag', {
-				fieldLabel: getText('要调整的基元'),
+				fieldLabel: getText('要调整的图元'),
 				name: 'optChangePrimitives',
 				id: 'optChangePrimitives',
 				displayField: 'pname',
@@ -165,7 +165,7 @@ function doOptimizer(){
 				valueField: 'pid',
 				queryMode: 'local',
 				store: changedConfigStore,
-				emptyText: getText('选择要调整的基元'),
+				emptyText: getText('选择要调整的图元'),
 				listeners: {
 					change: function(list, newData, oldData){
 						var newItems = newData?newData:[];
@@ -292,11 +292,11 @@ function doOptimizer(){
 				var changePrimitives = Ext.getCmp("optChangePrimitives").getValue();
 				
 				if(changePrimitives.length<1){
-					showNotifaction(getText("您必须选择一个或多个基元进行调整。"), "error", true);
+					showNotifaction(getText("您必须选择一个或多个图元进行调整。"), "error", true);
 					return;
 				}
 				if(! goalPrimitive){
-					showNotifaction(getText("您必须选择要优化的目标基元。"), "error", true);
+					showNotifaction(getText("您必须选择要优化的目标图元。"), "error", true);
 					return;
 				}
 				var mySetting = getSetting();

@@ -51,7 +51,7 @@ var sensitivityController = {}
 			items: [
 
 				Ext.create('Ext.form.field.Tag', {
-					fieldLabel: getText('受监控的基元'),
+					fieldLabel: getText('受监控的图元'),
 					name: 'monPrimitives',
 					id: 'monPrimitives',
 					displayField: 'pname',
@@ -59,7 +59,7 @@ var sensitivityController = {}
 					valueField: 'pid',
 					queryMode: 'local',
 					store: displayConfigStore,
-					emptyText: getText('选择要监控的基元'),
+					emptyText: getText('选择要监控的图元'),
 					value: mySetting.getAttribute("SensitivityPrimitives") ? mySetting.getAttribute("SensitivityPrimitives").split(",") : undefined
 				}),
 				new Ext.form.NumberField({
@@ -134,7 +134,7 @@ var sensitivityController = {}
 					var showRuns = isTrue(Ext.getCmp("plotEach").getValue());
 
 					if (items.length < 1) {
-						mxUtils.alert(getText("您必须选择一个或多个要监视的基元。"))
+						mxUtils.alert(getText("您必须选择一个或多个要监视的图元。"))
 						return
 					}
 					if (bounds.length < 1) {

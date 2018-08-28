@@ -180,7 +180,7 @@ function UnitsWindow(config) {
 	setupUnits(tree);
 
 	var win = new Ext.Window({
-		title: getText('基元单位'),
+		title: getText('图元单位'),
 		layout: {
 			type: "vbox",
 			align: "stretch"

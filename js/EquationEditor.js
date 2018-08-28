@@ -617,7 +617,7 @@ function EquationWindow(config) {
 			id: 'equationUnitsBut',
 			text: formatUnitsBut(cell.getAttribute("Units")),
 			glyph: 0xf1de,
-			tooltip: getText('基元单位'),
+			tooltip: getText('图元单位'),
 			handler: function() {
 				var unitsWindow = new UnitsWindow({
 					parent: "",
