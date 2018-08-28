@@ -47,10 +47,10 @@ var FileManagerWeb = new function() {
 	
 	this.saveModel = function() {
 		Ext.MessageBox.prompt('模型名称', '输入模型名称', function(btn, model_name){
-			if(btn=='OK') {
+			if(btn=='cancel') {
 				return;
 			}
-			if (btn == 'Cancel'){
+			if (btn == 'ok'){
 				var xml_data = getModelXML2();
 				model_name=appendFileExtension(model_name,InsightMakerFileExtension);
 				self.set_filename(model_name);
@@ -112,7 +112,7 @@ menu: [
 var FileMenu;
 switch(viewConfig.environment) {
 	case environment.InsightMakerOnline:
-		FileMenu = [FileMenuWeb];
+		FileMenu = [];
 		break;
 	case environment.WebOffline:
 		FileMenu = [FileMenuWeb];
