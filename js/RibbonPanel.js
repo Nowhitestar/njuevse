@@ -1122,7 +1122,8 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
                             scope: this
                         }
                     ]
-                },
+                },'-'
+                ,
                 {
                     hidden: (!viewConfig.primitiveGroup),
                     text: getText('添加基元'),
