@@ -350,7 +350,7 @@ function setSaveEnabled(e) {
 function updateWindowTitle() {
 	if (!is_embed) {
 		if (graph_title == "") {
-			document.title = "未命名 | 环境虚拟仿真实验平台";
+			document.title = "南京大学 | 环境虚拟仿真实验平台";
 		} else {
 			document.title = graph_title + " | 环境虚拟仿真实验平台";
 			if(window.history && window.history.replaceState){

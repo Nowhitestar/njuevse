@@ -14,10 +14,10 @@ function appendFileExtension(filename,extension) {
 function setTitle(filename) {
 	var title;
 	if(filename) {
-		title = filename+"| Insight Maker";
+		title = filename+"| 环境虚拟仿真实验平台";
 		
 	} else {
-		title = "Insight Maker";
+		title = "环境虚拟仿真实验平台";
 	}
 	window.parent.document.title = title;
 }
