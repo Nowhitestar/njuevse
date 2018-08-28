@@ -1,4 +1,4 @@
-var InsightMakerFileExtension = ".InsightMaker";
+var InsightMakerFileExtension = "";
 
 // Append file extension to file (if not already there)
 function appendFileExtension(filename,extension) {
@@ -14,7 +14,7 @@ function appendFileExtension(filename,extension) {
 function setTitle(filename) {
 	var title;
 	if(filename) {
-		title = filename+"| 环境虚拟仿真实验平台";
+		title = filename+" | 环境虚拟仿真实验平台";
 		
 	} else {
 		title = "环境虚拟仿真实验平台";
