@@ -1133,7 +1133,7 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
                     menu: [{
                             xtype: "component",
                             indent: false,
-                            html: "<b>" + getText('系统动力学模型') + "</b>",
+                            html: "<b>" + getText('系统动力') + "</b>",
                             disabled: true,
                             style: {
                                 "margin": "10px 5px 10px 5px"
@@ -1174,7 +1174,7 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
                         }, '-', {
                             xtype: "component",
                             indent: false,
-                            html: "<b>" + getText('多主体模型') + "</b>",
+                            html: "<b>" + getText('多主体建模') + "</b>",
                             disabled: true,
                             style: {
                                 "margin": "10px 5px 10px 5px"
