@@ -279,7 +279,7 @@ var sensitivityController = {}
 
 
 			var dat = {
-				name: cell.getAttribute("name") + " Quantiles Table",
+				name: cell.getAttribute("name") + " 分位数表",
 				type: "table"
 			};
 			
@@ -419,7 +419,7 @@ var sensitivityController = {}
 				legend: "right",
 				legendStatic: true,
 				data: chartSeries,
-				name: cell.getAttribute("name") + " " + getText("分位数图表"),
+				name: cell.getAttribute("name") + " " + getText("分位数图"),
 				type: "chart",
 				horizontalGrid: false,
 				verticalGrid: false,
