@@ -854,9 +854,9 @@ function main() {
 
 	if (viewConfig.saveEnabled) {
 		var mgr = new mxAutoSaveManager(graph);
-		mgr.autoSaveThreshold = 0;
-		mgr.autoSaveDelay = 0;
-		mgr.autoSaveThrottle = 0;
+		mgr.autoSaveThreshold = 5;
+		mgr.autoSaveDelay = 10;
+		mgr.autoSaveThrottle = 2;
 		mgr.save = function() {
 			if (graph_title != "") {
 				saveModel();
